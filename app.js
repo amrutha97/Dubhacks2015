@@ -6,7 +6,6 @@ app.set('views', __dirname);
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
-    alert(req.access_token);
     res.render('index', {});
 });
 
