@@ -22,12 +22,14 @@ function retrieveUserInfo(){
 
 function retrieveOtherUserInfo(){
     var currentHandle = $('#otherUserHandle').val();
+    console.log(currentHandle);
     $.ajax({
         type: "GET",
         dataType: "jsonp",
         cache: false,
         url: "https://api.instagram.com/v1/users/search?q=" + currentHandle + "&count=1&access_token="+str,
         success: function(data) {
+            console.log(data);
             $('#p2-img').attr('src', data.data.profile_picture);
             $('#p2-name').html(data.data.full_name);
             $('#p2-handler').html('@' + data.data.username);
@@ -48,6 +50,7 @@ function retrieveOtherUserImages(){
             }
         }
     });
+    console.log(otherImageList);
 }
 
 function addUserInfo(){
@@ -64,4 +67,5 @@ function submit(){
     retrieveOtherUserInfo();
     retrieveOtherUserImages();
     similarity = computeSimilarity(selfImageList, otherImageList);
+    console.log(similarity);
 }
