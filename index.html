@@ -14,7 +14,7 @@
                 },
             });
             $.ajax({
-                url: "https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token=" + instagram_access_token;                
+                url: "https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token=" + instagram_access_token,           
                 type: "GET",
                 success: function(data, textStatus, jqXHR) {
                     instagram_access_token = data.access_token;
