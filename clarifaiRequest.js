@@ -49,6 +49,4 @@ function imageRequest(photoUrl, token) {
     return returnVal;
 }
 
-var mydata = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
-console.log(mydata);
 

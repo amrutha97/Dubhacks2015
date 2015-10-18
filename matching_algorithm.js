@@ -1,5 +1,9 @@
 user1 = {set_size:0};
 user2 = {set_size:0};
+$.getScript('clarifaiRequest.js', function(){
+   alert("script loaded, not nescessarily executed");
+});
+
 
 function matching_algorithm(images1, images2) {
     var tags1 = getTags(images1);
@@ -14,7 +18,12 @@ function matching_algorithm(images1, images2) {
     return computeSimilarity(user1, user2);
 }
 
-function getTags(images) {}
+function getTags(imageUrl) {
+    var mydata = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
+    var classes = mydata['results'][0]['result']['tag']['classes'];
+    return classes;
+
+}
 
 function processTags(imageTags, masterList) {
     for(var index in imageTags) {
@@ -73,7 +82,7 @@ function computeSimilarity(user1, user2) {
         }
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
-    var adjustedValue = similarity / avgSize; 
+    var adjustedValue = similarity / avgSize;
 }
 
 /**
