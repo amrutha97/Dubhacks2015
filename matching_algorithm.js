@@ -54,6 +54,10 @@ function merge(imageTags, userTags) {
  */
 function computeAverages(userTags) {
     for (var tag in userTags) {
+        if (tag == 'set_size') {
+          continue;
+        }
+
         userTags[tag] /= userTags['set_size'];
     }
 
@@ -69,12 +73,16 @@ function computeAverages(userTags) {
 function computeSimilarity(user1, user2) {
     var similarity = 0;
     for (var tag in user1) {
+        if (tag == 'set_size') {
+            continue;
+        }
+
         if (user2.hasOwnProperty(tag)) {
             similarity += compare(user1[tag], user2[tag]);
         }
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
-    return similarity / avgSize;
+    return (similarity / avgSize) * 100;
 }
 
 /**
@@ -87,7 +95,7 @@ function computeSimilarity(user1, user2) {
 function compare(frequency1, frequency2) {
     if (Math.abs(frequency1 - frequency2) < 0.1) {
         return 1.0;
-    } else if (Math.abs(frequency1 - frequency2) < 0.5) {
+    } else if (Math.abs(frequency1 - frequency2) < 0.2) {
         return 0.5;
     } else {
         return 0.0;
