@@ -1,0 +1,71 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.12.7/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'owner',
+1 verbose cli   'ls',
+1 verbose cli   'compatigram' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 silly mapToRegistry name compatigram
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/compatigram
+8 verbose request uri https://registry.npmjs.org/compatigram
+9 verbose request no auth needed
+10 info attempt registry request try #1 at 2:56:11 AM
+11 verbose request id bbe4a1361aab75ba
+12 http request GET https://registry.npmjs.org/compatigram
+13 http 404 https://registry.npmjs.org/compatigram
+14 verbose headers { 'content-type': 'application/json',
+14 verbose headers   'cache-control': 'max-age=0',
+14 verbose headers   'content-length': '2',
+14 verbose headers   'accept-ranges': 'bytes',
+14 verbose headers   date: 'Sun, 18 Oct 2015 09:56:12 GMT',
+14 verbose headers   via: '1.1 varnish',
+14 verbose headers   age: '0',
+14 verbose headers   connection: 'keep-alive',
+14 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+14 verbose headers   'x-cache': 'MISS',
+14 verbose headers   'x-cache-hits': '0',
+14 verbose headers   'x-timer': 'S1445162172.265110,VS0,VE89' }
+15 silly get cb [ 404,
+15 silly get   { 'content-type': 'application/json',
+15 silly get     'cache-control': 'max-age=0',
+15 silly get     'content-length': '2',
+15 silly get     'accept-ranges': 'bytes',
+15 silly get     date: 'Sun, 18 Oct 2015 09:56:12 GMT',
+15 silly get     via: '1.1 varnish',
+15 silly get     age: '0',
+15 silly get     connection: 'keep-alive',
+15 silly get     'x-served-by': 'cache-sjc3120-SJC',
+15 silly get     'x-cache': 'MISS',
+15 silly get     'x-cache-hits': '0',
+15 silly get     'x-timer': 'S1445162172.265110,VS0,VE89' } ]
+16 error owner ls Couldn't get owner data compatigram
+17 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/compatigram
+17 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+17 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+17 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+17 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+17 verbose stack     at emitTwo (events.js:87:13)
+17 verbose stack     at Request.emit (events.js:172:7)
+17 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+17 verbose stack     at emitOne (events.js:82:20)
+17 verbose stack     at Request.emit (events.js:169:7)
+17 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+18 verbose statusCode 404
+19 verbose pkgid compatigram
+20 verbose cwd /Users/akshay/Documents/Programming/Dubhacks2015
+21 error Darwin 15.0.0
+22 error argv "/usr/local/Cellar/node/0.12.7/bin/node" "/usr/local/bin/npm" "owner" "ls" "compatigram"
+23 error node v4.2.1
+24 error npm  v2.14.7
+25 error code E404
+26 error 404 Registry returned 404 for GET on https://registry.npmjs.org/compatigram
+26 error 404
+26 error 404 'compatigram' is not in the npm registry.
+26 error 404 You should bug the author to publish it (or use the name yourself!)
+26 error 404
+26 error 404 Note that you can also install from a
+26 error 404 tarball, folder, http url, or git url.
+27 verbose exit [ 1, true ]
