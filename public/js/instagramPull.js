@@ -12,8 +12,8 @@ function retrieveUserInfo(){
         url: "https://api.instagram.com/v1/users/self/?access_token="+str,
         success: function(data) {
             selfID = data['data']['id'];
-            $('#mainUserHandle').val(selfUsername);
-            $('#p1-img').attr('src',profilePicture);
+            $('#mainUserHandle').val(data['data']['username']);
+            $('#p1-img').attr('src',data['data']['profile_picture']);
             $('#p1-name').html(data.data.full_name);
             $('#p1-handler').html('@' + data.data.username);
         }
