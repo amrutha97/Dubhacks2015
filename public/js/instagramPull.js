@@ -48,10 +48,10 @@ function retrieveOtherUserImages(){
             data['data'][0]['images']['standard_resolution']['url']
             for(var i = 0; i < data['data'].length; i++){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
+                console.log(data['data'][i]['images']['standard_resolution']['url']);
             }
-            similarity = computeSimilarity(selfImageList, otherImageList);
-            console.log(similarity);
             console.log(otherImageList);
+            similarity = matching_algorithm(selfImageList, otherImageList);
         }
     });
 }
