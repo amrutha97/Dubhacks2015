@@ -93,7 +93,7 @@ function computeSimilarity(user1, user2) {
 
     if(similarity < avgSize) {
         return similarity / avgSize;
-    } return avgSize / similarity;
+    } return avgSize * 500 / similarity;
 }
 
 /**
