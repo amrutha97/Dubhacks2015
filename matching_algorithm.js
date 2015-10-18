@@ -34,16 +34,15 @@ var computeAverageFrequencies = function(userTags, totalPhotos) {
     return userTags;
 };
 
-function computeSimilarity(firstAvgs, secondAvgs) {    
+function computeSimilarity(user1, user2) {
     var compatibility = 0;
-    for (var avg in firstAvgs) {      
-        if(//comparing  
-           //
-        ) {
-            compatibility++;
+    for (var tag in user1) {
+        if (user2.hasOwnProperty(tag)) {
+            compatibility += compare(user1[tag], user2[tag]);
         }
     }
-    return compatibility;            
+    var avgSize = (user1[size] + user2[size]) / 2;
+    return compatibility / avgSize;
 }
 
 /**
