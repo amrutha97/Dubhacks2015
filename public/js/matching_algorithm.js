@@ -90,7 +90,10 @@ function computeSimilarity(user1, user2) {
         }
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
-    return similarity / avgSize;
+
+    if(similarity < avgSize) {
+        return similarity / avgSize;
+    } return avgSize / similarity;
 }
 
 /**
