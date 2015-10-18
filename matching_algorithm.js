@@ -4,9 +4,15 @@ $.getScript('clarifaiRequest.js', function(){
    alert("script loaded, not nescessarily executed");
 });
 
-var global_user1 = {set_size:0};
-var global_user2 = {set_size:0};
+var global_user1 = {set_size:0}; // all of the tags associated with user one
+var global_user2 = {set_size:0}; // all of the tags associated with user two
 
+/**
+ * Finds the % similarity between two users' profiles.
+ * @param images1 the first user's image urls
+ * @param images2 the second user's image urls
+ * @returns {number} the % similarity of two profiles
+ */
 function matching_algorithm(images1, images2) {
     global_user1 = aggregateTags(images1, global_user1);
     global_user2 = aggregateTags(images2, global_user2);

@@ -27,8 +27,8 @@
       <file leaf-file-name="matching_algorithm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matching_algorithm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3183024">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2785146">
+              <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -318,7 +318,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445193090954</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed matching_algorithm.js&#10;Fixed more weird merge issues in matching_algorithm.js.">
+      <created>1445196564912</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1445196564912</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -363,7 +369,8 @@
     <MESSAGE value="Fixed matching_algorithms.js&#10;Tested and debugged all functions except for matching_algorithm." />
     <MESSAGE value="Cleaned up matching_algorithms.js&#10;Cleaned up some of the methods (particularly matching_algorithm)." />
     <MESSAGE value="Fixed matching_algorithm.js&#10;Fixed the weird merge issues in matching_algorithm.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed matching_algorithm.js&#10;Fixed the weird merge issues in matching_algorithm.js." />
+    <MESSAGE value="Fixed matching_algorithm.js&#10;Fixed more weird merge issues in matching_algorithm.js." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed matching_algorithm.js&#10;Fixed more weird merge issues in matching_algorithm.js." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -372,8 +379,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matching_algorithm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3183024">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2785146">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
           <folding />
         </state>
       </provider>
