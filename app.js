@@ -2,7 +2,6 @@ var express = require('express'),
     app = express(),
     cons = require('consolidate');
 
-app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
