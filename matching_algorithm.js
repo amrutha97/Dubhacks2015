@@ -34,6 +34,18 @@ var computeAverageFrequencies = function(userTags, totalPhotos) {
     return userTags;
 };
 
+function computeSimilarity(firstAvgs, secondAvgs) {    
+    var compatibility = 0;
+    for (var avg in firstAvgs) {      
+        if(//comparing  
+           //
+        ) {
+            compatibility++;
+        }
+    }
+    return compatibility;            
+}
+
 /**
  * Compares the tag frequency of two users and returns a value (0, 0.5, or 1.0)
  * based
