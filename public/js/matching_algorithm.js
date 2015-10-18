@@ -118,10 +118,12 @@ function computeAverages(userTags) {
  * @returns {number} a value that represents how similar the two frequencies are
  */
 function compare(frequency1, frequency2) {
+    var avgFrequency = (frequency1 + frequency2) / 2;
+
     if (Math.abs(frequency1 - frequency2) < 0.1) {
-        return 100.0;
+        return 100.0 / avgFrequency;
     } else if (Math.abs(frequency1 - frequency2) < 0.5) {
-        return 50.0;
+        return 50.0 / avgFrequency;
     } else {
         return 0.0;
     }
