@@ -29,31 +29,33 @@
             <p class="description">Will you find your Instagram soulmate?</p>
         </header>
 
-        <!-- Evalutating compatibility-->
-        <div class="row large-6 text-center">
-
+        <div class="row text-center">
             <p class="instructions">Enter two Instagram handlers in the boxes below.</p>
-
-            <div class="scale ">
-                <div class="progress">
-                <span id="meter" class="meter blue">
-                      <p id="percent" class="percent"></p>
-                </span>
-                </div>
-            </div>
-
         </div>
 
         <!-- Emoji result -->
         <div class="row text-center">
-            <p>BFF potential!</p>
-            <img class="emoji" src="https://40.media.tumblr.com/ce442437fd950b122b17f6ac7a0d448c/tumblr_n301rxDBl71qcy2ooo1_500.png" alt="Happy emoji"/>
+            <div class="result-container">
+                <p id="result-description">BFF potential!</p>
+                <img id="emoji" class="emoji" src="https://40.media.tumblr.com/ce442437fd950b122b17f6ac7a0d448c/tumblr_n301rxDBl71qcy2ooo1_500.png" alt="Emoji"/>
+            </div>
+        </div>
+
+        <!-- Evalutating compatibility-->
+        <div class="row large-6 text-center">
+            <div class="scale ">
+                <div class="progress">
+                <span id="meter" class="meter red">
+                      <p id="percent" class="percent"></p>
+                </span>
+                </div>
+            </div>
         </div>
 
         <!-- Profile info -->
         <div class="row">
             <div class="columns push-2 large-4 text-center">
-                <input type="text" class="input-handler" placeholder="Enter Instagram handler"/>
+                <input type="text" class="input-handler" placeholder="Your Instagram handler"/>
                 <div class="profile-card right ">
                     <div id="p1-pic" class="profile-picture">
                         <img id="p1-img" src="" alt="Profile picture"/>
@@ -63,7 +65,7 @@
                 </div>
             </div>
             <div id="p2-pic" class="columns pull-2 large-4 text-center">
-                <input type="text" class="input-handler" placeholder="Enter Instagram handler"/>
+                <input type="text" class="input-handler" placeholder="Other Instagram handler"/>
                 <div class="profile-card ">
                     <div class="profile-picture">
                         <img id="p2-img" src="" alt="Profile picture"/>

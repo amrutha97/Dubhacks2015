@@ -30,6 +30,8 @@ header {
 }
 
 #page-title, .description {
+    font-size: 0.9em;
+    margin: 0 0 10px 0;
     font-family: 'Source Sans Pro';
 }
 #page-title {
@@ -45,15 +47,36 @@ header {
 }
 
 .description {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
 .instructions {
     font-size: 1.2em;
 }
 
-/* Emoji result */
+/* Result */
+.result-container {
+    width: auto;
+    display: inline-block;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
+    padding: 10px 20px 0 20px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+#result-description {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #EA7B69;
+}
+
 .emoji {
     width: 60px;
     margin-bottom: 20px;
@@ -66,7 +89,7 @@ header {
     margin: 0 auto 1rem auto;
     padding: 0;
     width: 88%;
-    height: 35px;
+    height: 30px;
     overflow: hidden;
     background: white;
     border-radius: 6px;
@@ -94,7 +117,7 @@ header {
     color: white;
 }
 
-.meter.blue {
+.meter.red {
     background: #EA7B69;
 }
 
