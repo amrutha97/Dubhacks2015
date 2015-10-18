@@ -34,6 +34,9 @@ function retrieveOtherUserInfo(){
             otherID = data['data']['id'];
         }
     });
+}
+
+function retrieveOtherUserImages(){
     $.ajax({
         type: "GET",
         dataType: "jsonp",
@@ -45,8 +48,6 @@ function retrieveOtherUserInfo(){
             }
         }
     });
-
-    similarity = computeSimilarity(selfImageList, otherImageList);
 }
 
 function addUserInfo(){
@@ -57,4 +58,10 @@ function addUserInfo(){
 function userInfo(){
     retrieveUserInfo();
     addUserInfo();
+}
+
+function submit(){
+    retrieveOtherUserInfo();
+    retrieveOtherUserImages();
+    similarity = computeSimilarity(selfImageList, otherImageList);
 }
