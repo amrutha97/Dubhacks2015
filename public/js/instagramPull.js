@@ -11,10 +11,12 @@ function retrieveUserInfo(){
         success: function(data) {
             selfID = data['data']['id'];
             selfUsername = data['data']['username'];
-            profilePicture = data['data']['profilePicture'];
+            profilePicture = data['data']['profile_picture'];
         }
     });
+}
 
+function addUserInfo(){
     $('.input-handler').val(selfUsername);
     $('#p1-img').attr('src',profilePicture);
 }
