@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 user1 = {set_size:0};
 user2 = {set_size:0};
 $.getScript('clarifaiRequest.js', function(){
    alert("script loaded, not nescessarily executed");
 });
 
-=======
 var global_user1 = {set_size:0};
 var global_user2 = {set_size:0};
->>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
-
 
 function matching_algorithm(images1, images2) {
     global_user1 = aggregateTags(images1, global_user1);
@@ -17,36 +13,32 @@ function matching_algorithm(images1, images2) {
     return computeSimilarity(global_user1, global_user2);
 }
 
-<<<<<<< HEAD
+/**
+ * Gets all of the tags associated with an image.
+ * @param imageUrl the url the image being analyzed
+ * @returns a list of tags associated with a given image
+ */
 function getTags(imageUrl) {
-    var mydata = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
-    var classes = mydata['results'][0]['result']['tag']['classes'];
-    return classes;
+    var myData = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
+    var tags = myData['results'][0]['result']['tag']['classes'];
+    return tags;
 
 }
 
-function processTags(imageTags, masterList) {
-    for(var index in imageTags) {
-        var image  = imageTags[index];
-        merge(image, masterList);
-=======
 /**
  * Gets tags from all images on a user's profile and aggregates them.
- * @param images
- * @param masterList
+ * @param imageUrls a list of image urls from a user's profile
+ * @param masterList all of the tags associated with a user
  * @returns a master list of all tags from all pictures on a user's profile
  */
-function aggregateTags(images, masterList) {
-    for(var index in images) {
-        var image  = images[index];
+function aggregateTags(imageUrls, masterList) {
+    for(var index in imageUrls) {
+        var image  = imageUrls[index];
         var imageTags = getTags(image);
         merge(imageTags, masterList);
->>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
     }
     return masterList;
 }
-
-function getTags(image) {}
 
 /**
  * Merges the tags of an individual image with the master list of tags for
@@ -91,9 +83,6 @@ function computeSimilarity(user1, user2) {
         }
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
-<<<<<<< HEAD
-    var adjustedValue = similarity / avgSize;
-=======
     return similarity / avgSize;
 }
 
@@ -105,10 +94,13 @@ function computeSimilarity(user1, user2) {
  */
 function computeAverages(userTags) {
     for (var tag in userTags) {
+        if (tag == 'set_size') {
+            continue;
+        }
+
         userTags[tag] /= userTags['set_size'];
     }
     return userTags;
->>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
 }
 
 /**
