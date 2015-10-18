@@ -5,6 +5,9 @@
         <script>
         var str = location.hash;
         str = str.substring(14, str.length);
+        $.ajaxSetup({
+            headers: {'Access-Control-Allow-Origin':'http://compatigram.herokuapp.com'}
+        })
         $.get("https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,function(data){
             console.log(data);
         });
