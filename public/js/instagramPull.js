@@ -46,12 +46,13 @@ function retrieveOtherUserImages(){
         cache: false,
         url: "https://api.instagram.com/v1/users/" + otherID + "/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
         success: function(data) {
+            data['data'][0]['images']['standard_resolution']['url']
             for(var i = 0; i < data['data'].length; i++){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
             }
             similarity = computeSimilarity(selfImageList, otherImageList);
             console.log(similarity);
+            console.log(otherImageList);
         }
     });
-    console.log(otherImageList);
 }
