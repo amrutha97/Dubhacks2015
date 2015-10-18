@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/foundation.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -23,15 +24,51 @@
 
         <!-- Add your site or application content here -->
         <header>
-            <h1 id="page-title">Compatigram</h1>
+            <h1 id="page-title">Compati<span>gram</span></h1>
             <p class="description">Will you find your Instagram soulmate?</p>
         </header>
+
+        <!-- Evalutating compatibility-->
+        <div class="row large-6">
+            <div class="progress">
+                <span class="meter blue" style="width:65%">
+                      <p class="percent">65%</p>
+                </span>
+            </div>
+
+
+        </div>
+
+        <!-- Profile info -->
+        <div class="row">
+            <div class="columns large-6 text-center">
+                <div class="profile-card push-3">
+                    <div id="p1-pic" class="profile-picture">
+                        <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-19/11311164_437454879796544_609684852_a.jpg" alt="Profile picture"/>
+                    </div>
+                    <p id="p1-name" class="profile-name">Amy Park</p>
+                    <p id="p1-handler" class="profile-handler">@amypark</p>
+
+                </div>
+            </div>
+            <div id="p2-pic" class="columns large-6 text-center">
+                <div class="profile-card push-1">
+                    <div class="profile-picture">
+                        <img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/11378700_491044537711253_1140802417_a.jpg" alt="Profile picture"/>
+                    </div>
+                    <p id="p2-name" class="profile-name">John Kemelmacher</p>
+                    <p id="p2-handler" class="profile-handler">@johnkemelmacher</p>
+                </div>
+            </div>
+        </div>
 
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>-->
         <script src="js/plugins.js"></script>
+        <script src="js/clarifai-basic.js"></script>
+        <script src="js/clarifaiRequest.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
