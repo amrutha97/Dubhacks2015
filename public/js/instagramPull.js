@@ -59,6 +59,8 @@ function retrieveOtherUserImages(){
 }
 
 function updateEmoji(){
+    var emoji = $('#emoji'),
+        desc = $('#result-description');
     if (similarity < 10) { // Retreat! Ghost face
         desc.html('Good lord retreat, retreat!');
         emoji.attr('src', 'img/Emoji Smiley-33.png');
