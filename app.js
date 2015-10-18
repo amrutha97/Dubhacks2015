@@ -6,5 +6,5 @@ app.engine('html', cons.swig);
 app.set('view engine', 'html');
 
 app.get('/', function(req, res){
-    res.render('index', {}});
+    res.render('index', {});
 });
