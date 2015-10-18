@@ -51,7 +51,7 @@ function retrieveOtherUserImages(){
                 console.log(data['data'][i]['images']['standard_resolution']['url']);
             }
             console.log(otherImageList);
-            similarity = Math.ceiling(matching_algorithm(selfImageList, otherImageList));
+            similarity = matching_algorithm(selfImageList, otherImageList);
             simPercent = similarity + '%';
             $('#meter').width(simPercent);
             $('#percent').html(simPercent);
