@@ -21,11 +21,12 @@ function retrieveUserInfo(){
 }
 
 function retrieveOtherUserInfo(){
+    var currentHandle = $('#otherUserHandle').val();
     $.ajax({
         type: "GET",
         dataType: "jsonp",
         cache: false,
-        url: "https://api.instagram.com/v1/users/search?q=" + $('#otherUserHandle').val() + "&count=1&access_token="+str,
+        url: "https://api.instagram.com/v1/users/search?q=" + currentHandle + "&count=1&access_token="+str,
         success: function(data) {
             $('#p2-img').attr('src', data.data.profile_picture);
             $('#p2-name').html(data.data.full_name);
