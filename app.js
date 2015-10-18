@@ -1,6 +1,7 @@
 var express = require('express'),
     app = express(),
-    engines = require('consolidate');
+    engines = require('consolidate'),
+    path = require("path");
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', __dirname);
