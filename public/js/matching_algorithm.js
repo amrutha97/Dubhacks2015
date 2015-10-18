@@ -91,9 +91,7 @@ function computeSimilarity(user1, user2) {
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
 
-    if(similarity < avgSize) {
-        return similarity / avgSize;
-    } return avgSize * 500 / similarity;
+    return (similarity / avgSize) * 100;
 }
 
 /**
@@ -121,12 +119,10 @@ function computeAverages(userTags) {
  * @returns {number} a value that represents how similar the two frequencies are
  */
 function compare(frequency1, frequency2) {
-    var avgFrequency = (frequency1 + frequency2) / 2;
-
     if (Math.abs(frequency1 - frequency2) < 0.1) {
-        return 100.0 * avgFrequency;
+        return 1;
     } else if (Math.abs(frequency1 - frequency2) < 0.5) {
-        return 50.0 * avgFrequency;
+        return 0.5;
     } else {
         return 0.0;
     }
