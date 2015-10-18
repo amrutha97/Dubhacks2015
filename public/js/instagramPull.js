@@ -14,6 +14,8 @@ function retrieveUserInfo(){
             selfID = data['data']['id'];
             selfUsername = data['data']['username'];
             profilePicture = data['data']['profile_picture'];
+            $('#p1-name').html(data.data.full_name);
+            $('#p1-handler').html('@' + data.data.username);
         }
     });
 }
@@ -49,8 +51,6 @@ function retrieveOtherUserInfo(){
 function addUserInfo(){
     $('#mainUserHandle').val(selfUsername);
     $('#p1-img').attr('src',profilePicture);
-    $('#p1-name').html(data.data.full_name);
-    $('#p1-handler').html('@' + data.data.username);
 }
 
 function userInfo(){
