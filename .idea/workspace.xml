@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
 <<<<<<< HEAD
     <list default="true" id="ed4b4451-fce2-4f0b-8261-f55f1ed56acc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matching_algorithm.js" afterPath="$PROJECT_DIR$/matching_algorithm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
     <list default="true" id="b1f9215f-0691-4b6c-938c-deb599a2bae7" name="Default" comment="">
@@ -34,7 +33,7 @@
       <file leaf-file-name="matching_algorithm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matching_algorithm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2785146">
+            <state vertical-scroll-proportion="-0.83554375">
               <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
 =======
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -508,7 +507,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445196564912</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commented matching_algorithm.js&#10;Clarified some points in matching_algorithm.js.">
+      <created>1445196849251</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1445196849251</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -554,7 +559,8 @@
     <MESSAGE value="Cleaned up matching_algorithms.js&#10;Cleaned up some of the methods (particularly matching_algorithm)." />
     <MESSAGE value="Fixed matching_algorithm.js&#10;Fixed the weird merge issues in matching_algorithm.js." />
     <MESSAGE value="Fixed matching_algorithm.js&#10;Fixed more weird merge issues in matching_algorithm.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed matching_algorithm.js&#10;Fixed more weird merge issues in matching_algorithm.js." />
+    <MESSAGE value="Commented matching_algorithm.js&#10;Clarified some points in matching_algorithm.js." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented matching_algorithm.js&#10;Clarified some points in matching_algorithm.js." />
   </component>
 =======
   <component name="TaskManager">
@@ -602,7 +608,7 @@
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/matching_algorithm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2785146">
+        <state vertical-scroll-proportion="-0.83554375">
           <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
 =======
     <entry file="file://$PROJECT_DIR$/js/clarifaiRequest.js">

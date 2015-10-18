@@ -1,5 +1,3 @@
-user1 = {set_size:0};
-user2 = {set_size:0};
 $.getScript('clarifaiRequest.js', function(){
    alert("script loaded, not nescessarily executed");
 });
@@ -14,6 +12,9 @@ var global_user2 = {set_size:0}; // all of the tags associated with user two
  * @returns {number} the % similarity of two profiles
  */
 function matching_algorithm(images1, images2) {
+    global_user1['set_size'] = images1.length;
+    global_user2['set_size'] = images2.length;
+
     global_user1 = aggregateTags(images1, global_user1);
     global_user2 = aggregateTags(images2, global_user2);
     return computeSimilarity(global_user1, global_user2);
@@ -63,7 +64,6 @@ function merge(imageTags, userTags) {
         } else {
             userTags[tag] = 1;
         }
-        userTags['set_size']++;
     }
     return userTags;
 }
