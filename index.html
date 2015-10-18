@@ -78,7 +78,7 @@
         <!-- Profile info -->
         <div class="row">
             <div class="columns push-2 large-4 text-center">
-                <input type="text" class="input-handler" placeholder="Your Instagram handle"/>
+                <input type="text" class="input-handler" id="mainUserHandle" placeholder="Your Instagram handle"/>
                 <div class="profile-card right ">
                     <div id="p1-pic" class="profile-picture">
                         <img id="p1-img" src="" alt="Profile picture"/>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div id="p2-pic" class="columns pull-2 large-4 text-center">
-                <input type="text" class="input-handler" placeholder="Other Instagram handle"/>
+                <input type="text" class="input-handler" id="otherUserHandle" placeholder="Other Instagram handle"/>
                 <div class="profile-card ">
                     <div class="profile-picture">
                         <img id="p2-img" src="" alt="Profile picture"/>
@@ -100,10 +100,10 @@
         </div>
 
         <div class="row text-center">
-            <a id="reload" class="button" onclick="userInfo()">Submit</a>
+            <a id="reload" class="button" onclick="userInfo()">Reload</a>
         </div>
         <div class="row text-center">
-            <a id="submit" class="button" onclick="submit()">Submit</a>
+            <a id="submit" class="button" onclick="retrieveOtherUserInfo()">Submit</a>
         </div>
 
 
