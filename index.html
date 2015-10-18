@@ -12,21 +12,29 @@
                 url: "https://instagram.com/oauth/authorize/?client_id=" + instagram_client_id + "&redirect_uri=http://compatigram.heroku.com&response_type=token",
                 headers:{'Access-Control-Allow-Origin':'http://compatigram.herokuapp.com'},
                 type: "GET",
-                success: function(data, textStatus, jqXHR) {
-                    instagram_access_token = data.access_token;
-                },
-            });
-            // $.ajax({
-            //     url: "https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token=" + instagram_access_token,
-            //     type: "GET",
-            //     success: function(data, textStatus, jqXHR) {
-            //         instagram_access_token = data.access_token;
-            //     },
-            // });
+=======
+        <script>
+        var stor;
+        var selfImageList = [];
+        var str = location.hash;
+        str = str.substring(14, str.length);
+        $.ajax({
+            type: "GET",
+            dataType: "jsonp",
+            cache: false,
+            url: "https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
+            success: function(data) {
+                stor = data;
+            }
+        });
+        for(var i = 0; i < stor['data'].length; i++){
+            selfImageList.push(stor['data'][i]['images']['standard_resolution']);
         }
         </script>
-    </head>
+        </head>
     <body>
         <p>Hi there!</p>
+        <p id='access_token'></p>
+        <a href="https://instagram.com/oauth/authorize/?client_id=b3ff009db8c3416e87f3b1625a475294&redirect_uri=http://compatigram.herokuapp.com&response_type=token">Click here!</a>
     </body>
 </html>
