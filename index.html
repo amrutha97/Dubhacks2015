@@ -1,5 +1,20 @@
-<!DOCTYPE html>
+<html class="no-js" lang="">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Compatigram</title>
+        <meta name="description" content="Will you find your Instagram soulmate?">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="/js/clarifaiRequest.js"></script>
         <script src="/js/matching_algorithm.js"></script>
@@ -20,10 +35,89 @@
             }
         });
         </script>
-        </head>
+    </head>
     <body>
-        <p>Hi there!</p>
-        <p id='access_token'></p>
-        <a href="https://instagram.com/oauth/authorize/?client_id=b3ff009db8c3416e87f3b1625a475294&redirect_uri=http://compatigram.herokuapp.com&response_type=token">Click here!</a>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="bg"></div>
+
+        <!-- Add your site or application content here -->
+        <header>
+            <h1 id="page-title">Compati<span>gram</span></h1>
+            <p class="description">Will you find your Instagram soulmate?</p>
+        </header>
+
+        <div class="row text-center">
+            <a id="instagram-login" class="button" href="https://instagram.com/oauth/authorize/?client_id=b3ff009db8c3416e87f3b1625a475294&redirect_uri=http://compatigram.herokuapp.com&response_type=token">Login to Instagram</a>
+
+            <p class="instructions">Enter two Instagram handles in the boxes below.</p>
+        </div>
+
+        <!-- Emoji result -->
+        <div class="row text-center">
+            <div class="result-container">
+                <p id="result-description">BFF potential!</p>
+                <img id="emoji" class="emoji" src="https://40.media.tumblr.com/ce442437fd950b122b17f6ac7a0d448c/tumblr_n301rxDBl71qcy2ooo1_500.png" alt="Emoji"/>
+            </div>
+        </div>
+
+        <!-- Evalutating compatibility-->
+        <div class="row large-6 text-center">
+            <div class="scale ">
+                <div class="progress">
+                <span id="meter" class="meter red">
+                      <p id="percent" class="percent"></p>
+                </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile info -->
+        <div class="row">
+            <div class="columns push-2 large-4 text-center">
+                <input type="text" class="input-handler" placeholder="Your Instagram handler"/>
+                <div class="profile-card right ">
+                    <div id="p1-pic" class="profile-picture">
+                        <img id="p1-img" src="" alt="Profile picture"/>
+                    </div>
+                    <p id="p1-name" class="profile-name"></p>
+                    <p id="p1-handler" class="profile-handler"></p>
+                </div>
+            </div>
+            <div id="p2-pic" class="columns pull-2 large-4 text-center">
+                <input type="text" class="input-handler" placeholder="Other Instagram handler"/>
+                <div class="profile-card ">
+                    <div class="profile-picture">
+                        <img id="p2-img" src="" alt="Profile picture"/>
+                    </div>
+                    <p id="p2-name" class="profile-name"></p>
+                    <p id="p2-handler" class="profile-handler"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>-->
+        <script src="js/plugins.js"></script>
+        <script src="js/clarifai-basic.js"></script>
+        <script src="js/clarifaiRequest.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+>>>>>>> boilerplate
     </body>
 </html>
