@@ -12,7 +12,9 @@ function getAccessToken() {
         async: false,
         success: function(data, textStatus, jqXHR) {
             // do stuff with data
-            imageRequest("http://i.imgur.com/tUfxxLd.jpg", data["access_token"]);
+            console.log(data['access_token']);
+            imageRequest("http://i.imgur.com/ECAKUzG.jpg", data["access_token"]);
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             // do stuff with error
@@ -20,20 +22,24 @@ function getAccessToken() {
     });
 }
 
-function imageRequest(url, token) {
-    var formData = {
-        Authorization: "Bearer" + token,
-    }
+function imageRequest(photoUrl, token) {
     jQuery.ajax({
         url: "https://api.clarifai.com/v1/tag/",
         type: "post",
+        beforeSend: function(xhr) {
+            console.log('Bearer'.concat(token))
+            xhr.setRequestHeader('Authorization', 'Bearer '.concat(token));
+        },
         data: {
-
+            url: photoUrl,
         },
         dataType: 'json',
         async: false,
         success: function(data) {
-
+            console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrow) {
+            console.log(errorThrow);
         }
     })
 }
