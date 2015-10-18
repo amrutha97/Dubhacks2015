@@ -34,6 +34,7 @@ function retrieveOtherUserInfo(){
             $('#p2-name').html(data.data[0].full_name);
             $('#p2-handler').html('@' + data.data[0].username);
             otherID = data['data'][0]['id'];
+            retrieveOtherUserImages();
         }
     });
 }
@@ -48,14 +49,9 @@ function retrieveOtherUserImages(){
             for(var i = 0; i < data['data'].length; i++){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
             }
+            similarity = computeSimilarity(selfImageList, otherImageList);
+            console.log(similarity);
         }
     });
     console.log(otherImageList);
-}
-
-function submit(){
-    retrieveOtherUserInfo();
-    retrieveOtherUserImages();
-    similarity = computeSimilarity(selfImageList, otherImageList);
-    console.log(similarity);
 }
