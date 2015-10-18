@@ -2,6 +2,7 @@ var selfID;
 var otherID;
 var selfUsername;
 var profilePicture;
+var otherImageList = [];
 
 function retrieveUserInfo(){
     $.ajax({
@@ -30,6 +31,19 @@ function retrieveOtherUserInfo(){
             otherID = data['data']['id'];
         }
     });
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/users/" + otherID + "/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
+        success: function(data) {
+            for(var i = 0; i < data['data'].length; i++){
+                otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
+            }
+        }
+    });
+
+    similarity = computeSimilarity(selfImageList, otherImageList);
 }
 
 function addUserInfo(){
