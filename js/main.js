@@ -3,7 +3,7 @@ $(document).ready(function() {
     // HEY! Change similarity based on the percentage returned
     // after Danny and Amrutha figure out how to return the
     // percentage for similarity
-    var similarity = 85; // Adjust this
+    var similarity = 55; // Adjust this
 
     var emoji = $('#emoji'),
         desc = $('#result-description');

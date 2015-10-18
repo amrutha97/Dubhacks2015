@@ -63,8 +63,7 @@ header {
     background: white;
     border-radius: 3px;
     margin: 0 auto 10px auto;
-    margin-bottom: 10px;
-    padding: 10px 20px 0 20px;
+    padding: 15px 30px 0 30px;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.12);
