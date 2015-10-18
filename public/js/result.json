@@ -3,7 +3,7 @@
         "id": "1574083",
         "username": "snoopdogg",
         "full_name": "Snoop Dogg",
-        "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1574083_75sq_1295469061.jpg",
+        "profile_picture": "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-19/11311164_437454879796544_609684852_a.jpg",
         "bio": "This is my bio",
         "website": "http://snoopdogg.com",
         "counts": {
@@ -11,4 +11,5 @@
             "follows": 420,
             "followed_by": 3410
         }
+    }
 }
