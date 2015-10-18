@@ -44,6 +44,7 @@ function aggregateTags(imageUrls, masterList) {
         var imageTags = getTags(image);
         merge(imageTags, masterList);
     }
+    console.log(masterList);
     return masterList;
 }
 

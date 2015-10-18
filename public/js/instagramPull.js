@@ -44,14 +44,12 @@ function retrieveOtherUserImages(){
         cache: false,
         url: "https://api.instagram.com/v1/users/" + otherID + "/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
         success: function(data) {
-            console.log(data);
-            data['data'][0]['images']['standard_resolution']['url']
             for(var i = 0; i < data['data'].length; i++){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
                 console.log(data['data'][i]['images']['standard_resolution']['url']);
             }
             console.log(otherImageList);
-            similarity = Math.ceiling(matching_algorithm(selfImageList, otherImageList));
+            similarity = matching_algorithm(selfImageList, otherImageList);
             simPercent = similarity + '%';
             $('#meter').width(simPercent);
             $('#percent').html(simPercent);
@@ -61,6 +59,8 @@ function retrieveOtherUserImages(){
 }
 
 function updateEmoji(){
+    var emoji = $('#emoji'),
+        desc = $('#result-description');
     if (similarity < 10) { // Retreat! Ghost face
         desc.html('Good lord retreat, retreat!');
         emoji.attr('src', 'img/Emoji Smiley-33.png');
