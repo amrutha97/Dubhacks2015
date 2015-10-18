@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+user1 = {set_size:0};
+user2 = {set_size:0};
+$.getScript('clarifaiRequest.js', function(){
+   alert("script loaded, not nescessarily executed");
+});
+
+=======
 var global_user1 = {set_size:0};
 var global_user2 = {set_size:0};
+>>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
 
 
 function matching_algorithm(images1, images2) {
@@ -8,6 +17,19 @@ function matching_algorithm(images1, images2) {
     return computeSimilarity(global_user1, global_user2);
 }
 
+<<<<<<< HEAD
+function getTags(imageUrl) {
+    var mydata = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
+    var classes = mydata['results'][0]['result']['tag']['classes'];
+    return classes;
+
+}
+
+function processTags(imageTags, masterList) {
+    for(var index in imageTags) {
+        var image  = imageTags[index];
+        merge(image, masterList);
+=======
 /**
  * Gets tags from all images on a user's profile and aggregates them.
  * @param images
@@ -19,6 +41,7 @@ function aggregateTags(images, masterList) {
         var image  = images[index];
         var imageTags = getTags(image);
         merge(imageTags, masterList);
+>>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
     }
     return masterList;
 }
@@ -68,6 +91,9 @@ function computeSimilarity(user1, user2) {
         }
     }
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
+<<<<<<< HEAD
+    var adjustedValue = similarity / avgSize;
+=======
     return similarity / avgSize;
 }
 
@@ -82,6 +108,7 @@ function computeAverages(userTags) {
         userTags[tag] /= userTags['set_size'];
     }
     return userTags;
+>>>>>>> 302cffbfb4dc92cf31b05f23a627b0f474138a66
 }
 
 /**
