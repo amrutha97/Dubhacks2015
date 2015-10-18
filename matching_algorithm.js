@@ -1,3 +1,29 @@
+user1 = {set_size:0};
+user2 = {set_size:0};
+
+function matching_algorithm(images1, images2) {
+    var tags1 = getTags(images1);
+    var tags2 = getTags(images2);
+
+    processTags(tags1, user1);
+    processTags(tags2, user2);
+
+    computeAverages(user1);
+    computeAverages(user2);
+
+    return computeSimilarity(user1, user2);
+}
+
+function getTags(images) {}
+
+function processTags(imageTags, masterList) {
+    for(var index in imageTags) {
+        var image  = imageTags[index];
+        merge(image, masterList);
+    }
+    return masterList;
+}
+
 /**
  * Merges the tags of an individual image with the master list of tags for
  * a particular user and returns the updated master list.
@@ -6,7 +32,7 @@
  *        frequency of each tag
  * @returns a map with entries from tagList merged into tagMap
  */
-var merge = function(imageTags, userTags) {
+function merge(imageTags, userTags) {
     for (var index in imageTags) {
         // hacking tag b/c js is stupid and gets the index not the var
         var tag = imageTags[index];
@@ -15,34 +41,40 @@ var merge = function(imageTags, userTags) {
         } else {
             userTags[tag] = 1;
         }
+        userTags['set_size']++;
     }
     return userTags;
-};
+}
 
 /**
  * Computes the average frequency of each tag associated with a user's images.
  * @param userTags a map which contains all of a users tags and the
  *        frequency of each tag
- * @param totalPhotos the total number of images a user has on their profile
  * @returns a map with the average frequency of each tag associated with a user
  */
-var computeAverageFrequencies = function(userTags, totalPhotos) {
+function computeAverages(userTags) {
     for (var tag in userTags) {
-        userTags[tag] /= totalPhotos;
+        userTags[tag] /= userTags['set_size'];
     }
 
     return userTags;
-};
+}
 
+/**
+ * Computes the similarity between two user's tag sets.
+ * @param user1 the first user's tag set
+ * @param user2 the second user's tag set
+ * @returns {number} the similarity between two user's profiles as a percentage
+ */
 function computeSimilarity(user1, user2) {
-    var compatibility = 0;
+    var similarity = 0;
     for (var tag in user1) {
         if (user2.hasOwnProperty(tag)) {
-            compatibility += compare(user1[tag], user2[tag]);
+            similarity += compare(user1[tag], user2[tag]);
         }
     }
-    var avgSize = (user1[size] + user2[size]) / 2;
-    return compatibility / avgSize;
+    var avgSize = (user1['set_size'] + user2['set_size']) / 2;
+    return similarity / avgSize;
 }
 
 /**
@@ -52,7 +84,7 @@ function computeSimilarity(user1, user2) {
  * @param frequency2 the frequency of a given tag for user 2
  * @returns a value that represents how similar the two frequencies are
  */
-var compare = function(frequency1, frequency2) {
+function compare(frequency1, frequency2) {
     if (Math.abs(frequency1 - frequency2) < 0.1) {
         return 1.0;
     } else if (Math.abs(frequency1 - frequency2) < 0.5) {
@@ -60,4 +92,4 @@ var compare = function(frequency1, frequency2) {
     } else {
         return 0.0;
     }
-};
+}
