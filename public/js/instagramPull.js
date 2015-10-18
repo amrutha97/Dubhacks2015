@@ -52,6 +52,9 @@ function retrieveOtherUserImages(){
             }
             console.log(otherImageList);
             similarity = matching_algorithm(selfImageList, otherImageList);
+            simPercent = similarity + '%';
+            $('#meter').width(simPercent);
+            $('#percent').html(simPercent);
         }
     });
 }

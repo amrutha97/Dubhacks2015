@@ -10,7 +10,7 @@ function getAccessToken() {
         url: "https://api.clarifai.com/v1/token/",
         type: "POST",
         data: formData,
-        async: false,
+        async: true,
         success: function(data, textStatus, jqXHR) {
             // do stuff with data
             returnVal =  data['access_token'];
@@ -38,7 +38,7 @@ function imageRequest(photoUrl, token) {
             url: photoUrl
         },
         dataType: 'json',
-        async: false,
+        async: true,
         success: function(data) {
             returnVal = data;
         },
@@ -48,5 +48,3 @@ function imageRequest(photoUrl, token) {
     });
     return returnVal;
 }
-
-
