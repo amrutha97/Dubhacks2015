@@ -72,9 +72,8 @@ function computeSimilarity(user1, user2) {
             similarity += compare(user1[tag], user2[tag]);
         }
     }
-    similarity *= 100;
     var avgSize = (user1['set_size'] + user2['set_size']) / 2;
-    return similarity / avgSize;
+    var adjustedValue = similarity / avgSize; 
 }
 
 /**
@@ -86,9 +85,9 @@ function computeSimilarity(user1, user2) {
  */
 function compare(frequency1, frequency2) {
     if (Math.abs(frequency1 - frequency2) < 0.1) {
-        return 1.0;
+        return 100.0;
     } else if (Math.abs(frequency1 - frequency2) < 0.5) {
-        return 0.5;
+        return 50.0;
     } else {
         return 0.0;
     }
