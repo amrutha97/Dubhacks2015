@@ -43,11 +43,9 @@ function imageRequest(url, token) {
 
         },
         dataType: 'json',
-        async: false,
+        async: true,
         success: function(data) {
 
         }
     })
 }
-
-
