@@ -13,7 +13,7 @@
             dataType: "jsonp",
             cache: false,
             url: "https://api.instagram.com/v1/users/self/media/recent/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
-            success: function(data, status) {
+            success: function(data) {
                 console.log(data);
                 // for(var i = 0; i < data['data'].length; i++){
                 //     selfImageList.push(data['data'][0]['images']['standard_resolution']['url']);
