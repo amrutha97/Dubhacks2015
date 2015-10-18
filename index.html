@@ -29,32 +29,38 @@
         </header>
 
         <!-- Evalutating compatibility-->
-        <div class="row large-6">
-            <div class="progress">
+        <div class="row large-6 text-center">
+
+            <p class="instructions">Enter two Instagram handlers in the boxes below.</p>
+
+            <div class="scale ">
+                <p class="text-center">Similarity level</p>
+                <div class="progress">
                 <span class="meter blue" style="width:65%">
                       <p class="percent">65%</p>
                 </span>
+                </div>
             </div>
-
 
         </div>
 
         <!-- Profile info -->
         <div class="row">
-            <div class="columns large-6 text-center">
-                <div class="profile-card push-3">
+            <div class="columns push-2 large-4 text-center">
+                <input type="text" class="input-handler" placeholder="Enter Instagram handler"/>
+                <div class="profile-card right ">
                     <div id="p1-pic" class="profile-picture">
-                        <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-19/11311164_437454879796544_609684852_a.jpg" alt="Profile picture"/>
+                        <img id="p1-img" src="" alt="Profile picture"/>
                     </div>
                     <p id="p1-name" class="profile-name">Amy Park</p>
                     <p id="p1-handler" class="profile-handler">@amypark</p>
-
                 </div>
             </div>
-            <div id="p2-pic" class="columns large-6 text-center">
-                <div class="profile-card push-1">
+            <div id="p2-pic" class="columns pull-2 large-4 text-center">
+                <input type="text" class="input-handler" placeholder="Enter Instagram handler"/>
+                <div class="profile-card ">
                     <div class="profile-picture">
-                        <img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/11378700_491044537711253_1140802417_a.jpg" alt="Profile picture"/>
+                        <img id="p2-img" src="" alt="Profile picture"/>
                     </div>
                     <p id="p2-name" class="profile-name">John Kemelmacher</p>
                     <p id="p2-handler" class="profile-handler">@johnkemelmacher</p>
