@@ -3,8 +3,8 @@ function getAccessToken() {
     var returnVal;
     var formData = {
         grant_type: "client_credentials",
-        client_id: "XqUKUx-7b5Y1TIXChj8yhXGdcRldG5t7wzJWTtH8",
-        client_secret: "a5rz9I8_aJnJqh6EUn1nNponqSVjZiuOPSrmsCE3",
+        client_id: "MCCoVNilRDsqgvLAfn4b5yBQbgGM2X8JS-_BPzVW",
+        client_secret: "LF9rLzlKkusMdygT555a4UxgWOTIxqRMg3TOTyRC",
         };
     jQuery.ajax({
         url: "https://api.clarifai.com/v1/token/",
