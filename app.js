@@ -6,8 +6,7 @@ app.set('views', __dirname);
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
-    alert(location.hash);
-    res.render('index', {});
+    res.render('index', {location.hash});
 });
 
 app.listen(process.env.PORT || 8080);
