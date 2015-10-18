@@ -30,10 +30,10 @@ function retrieveOtherUserInfo(){
         url: "https://api.instagram.com/v1/users/search?q=" + currentHandle + "&count=1&access_token="+str,
         success: function(data) {
             console.log(data);
-            $('#p2-img').attr('src', data.data.profile_picture);
-            $('#p2-name').html(data.data.full_name);
-            $('#p2-handler').html('@' + data.data.username);
-            otherID = data['data']['id'];
+            $('#p2-img').attr('src', data.data[0].profile_picture);
+            $('#p2-name').html(data.data[0].full_name);
+            $('#p2-handler').html('@' + data.data[0].username);
+            otherID = data['data'][0]['id'];
         }
     });
 }
