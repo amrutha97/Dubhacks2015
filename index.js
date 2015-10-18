@@ -18,8 +18,8 @@ function loadImages(){
     //     }
     // });
     $.ajax({
-        url: "https://instagram.com/oauth/authorize/?client_id=" + instagram_client_id + "&redirect_uri=http://localhost&response_type=token",
-        headers: {'Access-Control-Allow-Origin':'http://www.compatigram.co/'},
+        url: "https://instagram.com/oauth/authorize/?client_id=" + instagram_client_id + "&redirect_uri=http://compatigram.heroku.com&response_type=token",
+        type: "GET",
         success: function(data, textStatus, jqXHR) {
             console.log(data);
         },
