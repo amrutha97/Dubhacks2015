@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     engines = require('consolidate');
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', __dirname);
 app.set('view engine', 'jade');
 
