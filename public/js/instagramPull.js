@@ -20,3 +20,8 @@ function addUserInfo(){
     $('.input-handler').val(selfUsername);
     $('#p1-img').attr('src',profilePicture);
 }
+
+function userInfo(){
+    retrieveUserInfo();
+    addUserInfo();
+}
