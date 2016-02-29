@@ -1,6 +1,6 @@
 {
   "name": "compatigram",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "compatibility for instagram users",
   "main": "app.js",
   "dependencies": {
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/amrutha97/Dubhacks2015/issues"
   },
-  "homepage": "https://github.com/amrutha97/Dubhacks2015#readme"
+  "homepage": "http://compatigram.co"
 }

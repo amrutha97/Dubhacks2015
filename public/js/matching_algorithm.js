@@ -39,13 +39,14 @@ function getTags(imageUrl) {
  * @returns a master list of all tags from all pictures on a user's profile
  */
 function aggregateTags(imageUrls, masterList) {
+    var mL = masterList;
     for(var index in imageUrls) {
         var image  = imageUrls[index];
         var imageTags = getTags(image);
-        merge(imageTags, masterList);
+        mL = merge(imageTags, mL);
     }
-    console.log(masterList);
-    return masterList;
+    console.log(mL);
+    return mL;
 }
 
 /**

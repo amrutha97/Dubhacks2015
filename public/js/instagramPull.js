@@ -48,7 +48,7 @@ function retrieveOtherUserImages(){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
                 console.log(data['data'][i]['images']['standard_resolution']['url']);
             }
-            console.log(otherImageList);
+            console.log('Retrieved images:' + otherImageList);
             similarity = matching_algorithm(selfImageList, otherImageList);
             simPercent = similarity + '%';
             $('#meter').width(simPercent);
