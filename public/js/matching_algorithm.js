@@ -26,7 +26,7 @@ function matching_algorithm(images1, images2) {
  * @returns a list of tags associated with a given image
  */
 function getTags(imageUrl) {
-    var myData = imageRequest("http://i.imgur.com/ECAKUzG.jpg", getAccessToken());
+    var myData = imageRequest(imageUrl, getAccessToken());
     var tags = myData['results'][0]['result']['tag']['classes'];
     return tags;
 
