@@ -66,6 +66,7 @@ function retrieveOtherUserFollowers(){
         cache: false,
         url: "https://api.instagram.com/v1/users/" + otherID + "/followed_by/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
         success: function(data) {
+            console.log(data);
             for(var i = 0; i < data['data'].length; i++){
                 otherImageList.push(data['data'][i]['images']['standard_resolution']['url']);
                 console.log(data['data'][i]['images']['standard_resolution']['url']);

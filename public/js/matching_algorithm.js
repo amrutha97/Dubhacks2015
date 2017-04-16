@@ -1,5 +1,5 @@
 $.getScript('js/clarifaiRequest.js', function(){
-   alert("script loaded, not nescessarily executed");
+   console.log("script loaded, not nescessarily executed");
 });
 
 var global_user1 = {set_size:0}; // all of the tags associated with user one
