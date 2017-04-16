@@ -1,4 +1,4 @@
-$.getScript('clarifaiRequest.js', function(){
+$.getScript('js/clarifaiRequest.js', function(){
    alert("script loaded, not nescessarily executed");
 });
 
