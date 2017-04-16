@@ -64,7 +64,7 @@ function retrieveOtherUserFollowers(){
         type: "GET",
         dataType: "jsonp",
         cache: false,
-        url: "https://api.instagram.com/v1/users/" + otherID + "/followed_by/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
+        url: "https://api.instagram.com/v1/friendships/" + otherID + "/followers/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str,
         success: function(data) {
             console.log(data);
             for(var i = 0; i < data['data'].length; i++){
