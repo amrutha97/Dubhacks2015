@@ -60,8 +60,7 @@ function retrieveOtherUserImages(){
 }
 
 function retrieveOtherUserFollowers(){
-    var url = "https://api.instagram.com/v1/users/" + otherID + "/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str;
-    console.log(url);
+    var url = "https://api.instagram.com/v1/users/" + otherID + "/followed_by/?client_id=b3ff009db8c3416e87f3b1625a475294&access_token="+str;
     $.ajax({
         type: "GET",
         dataType: "jsonp",
